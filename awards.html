@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awards | TigerTronics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Timeline specific styles */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--color-primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .container-t {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .container-t::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--color-bg);
+            border: 4px solid var(--color-secondary);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 18px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--color-bg-alt);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--color-bg-alt);
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 18px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--color-bg-alt);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--color-bg-alt) transparent transparent;
+        }
+
+        .right::after {
+            left: -10px;
+        }
+
+        .content-t {
+            padding: 20px 30px;
+            background-color: var(--color-bg-alt);
+            position: relative;
+            border-radius: 6px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .container-t {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .container-t::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            .left::after,
+            .right::after {
+                left: 21px;
+            }
+
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-robot"></i> Tiger<span>Tronics</span></a>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="season.html">Season</a></li>
+                <li><a href="awards.html" class="active">Awards</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="outreach.html">Outreach</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="section-padding" style="padding-top: 120px; text-align: center;">
+        <div class="container fade-in">
+            <h1>Our Achievements</h1>
+            <p>Recognizing excellence in robot design, control, and community outreach.</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="timeline">
+            <div class="container-t left fade-in">
+                <div class="content-t">
+                    <h2>2024 - State Championship</h2>
+                    <p>Inspire Award 2nd Place</p>
+                    <p>Advancement to World Championship</p>
+                </div>
+            </div>
+            <div class="container-t right fade-in">
+                <div class="content-t">
+                    <h2>2023 - Regional Qualifier</h2>
+                    <p>Winning Alliance Captain</p>
+                    <p>Control Award Winner</p>
+                </div>
+            </div>
+            <div class="container-t left fade-in">
+                <div class="content-t">
+                    <h2>2022 - Rookie Year</h2>
+                    <p>Rookie All-Star Award</p>
+                    <p>Highest Ranked Rookie Team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <h3>TigerTronics</h3>
+                <p>FTC Team #32561</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="season.html">Current Season</a></li>
+                    <li><a href="outreach.html">Community</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Email: contact@tigertronics32561.org</p>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p>&copy; 2025 TigerTronics. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
